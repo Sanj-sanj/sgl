@@ -1,5 +1,6 @@
 ---
-import Navigation from "../components/Navigation.astro";
+import Header from "../components/Header.astro";
+import WindowPane from "../components/WindowPane.astro";
 
 interface Props {
   title: string;
@@ -18,8 +19,71 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body>
-    <Navigation />
+  <body class="relative" <Header>
+    <Header />
+    <!-- WINDOW PANE DISPLAYS the NAVIGATION ON MOBILE VIEW -->
+    <WindowPane />
+    <!-- MAIN CONTENT -->
     <slot />
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <div>testing</div>
+    <!-- FOOTER -->
   </body>
 </html>

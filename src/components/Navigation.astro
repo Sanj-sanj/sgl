@@ -1,17 +1,16 @@
 ---
+interface Props {
+  orientation: "horizontal" | "vertical";
+}
 
+const { orientation } = Astro.props;
 ---
 
-<header
-  class="bg-zinc-200 w-full min-h-[14vh] sticky top-0 flex justify-between items-center px-4"
+<nav
+  class={`sm:w-1/2 lg:w-2/6 justify-between ${orientation === "horizontal" ? " hidden sm:flex" : "flex flex-col"}`}
 >
-  [logo goes here]
-  <button class="sm:hidden bg-slate-50 rounded-sm p-2"> [ = ] </button>
-
-  <nav class="hidden sm:flex sm:w-1/2 justify-between">
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Our Services</a>
-    <a href="#">Contact Us</a>
-  </nav>
-</header>
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Our Services</a>
+  <a href="#">Contact Us</a>
+</nav>
