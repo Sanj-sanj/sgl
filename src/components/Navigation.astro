@@ -7,7 +7,7 @@ const { orientation } = Astro.props;
 ---
 
 <nav
-  class={`sm:w-1/2 lg:w-2/6 justify-between ${orientation === "horizontal" ? " hidden sm:flex" : "flex flex-col"}`}
+  class={`sm:w-1/2 lg:w-2/6 justify-between ${orientation === "horizontal" ? "sm:flex" : "flex-col"}`}
 >
   <a href="#">Home</a>
   <a href="#">About</a>

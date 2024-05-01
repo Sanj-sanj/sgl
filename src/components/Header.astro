@@ -10,3 +10,9 @@ import Navigation from "./Navigation.astro";
   <button class="sm:hidden bg-slate-50 rounded-sm p-2"> [ = ] </button>
   <Navigation orientation="horizontal" />
 </header>
+
+<script>
+  document.querySelector("button")?.addEventListener("click", (e) => {
+    document.querySelector(".mobile-menu")?.classList.toggle("hidden");
+  });
+</script>
