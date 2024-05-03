@@ -8,11 +8,21 @@ import Navigation from "./Navigation.astro";
   <div class="w-1/4">[logo goes here]</div>
 
   <button class="sm:hidden bg-slate-50 rounded-sm p-2"> [ = ] </button>
-  <Navigation orientation="horizontal" />
+  <fragment class="hidden sm:flex w-full justify-end">
+    <Navigation orientation="horizontal" />
+  </fragment>
 </header>
 
 <script>
+  //adds a click event to the Hamburger icon, shows the menu and hides overflow
   document.querySelector("button")?.addEventListener("click", (e) => {
     document.querySelector(".mobile-menu")?.classList.toggle("hidden");
+    document.querySelector("html")?.classList.toggle("overflow-hidden");
+  });
+  document.querySelector(".mobile-menu")?.addEventListener("click", (e) => {
+    const el = e.target as HTMLElement;
+    el.classList.contains("mobile-menu") &&
+      el.classList.toggle("hidden") &&
+      document.querySelector("html")?.classList.toggle("overflow-hidden");
   });
 </script>

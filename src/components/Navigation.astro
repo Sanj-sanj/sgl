@@ -6,11 +6,9 @@ interface Props {
 const { orientation } = Astro.props;
 ---
 
-<nav
-  class={`sm:w-1/2 lg:w-2/6 justify-between ${orientation === "horizontal" ? "sm:flex" : "flex-col"}`}
->
-  <a href="#">Home</a>
-  <a href="#">About</a>
-  <a href="#">Our Services</a>
-  <a href="#">Contact Us</a>
+<nav class={` flex ${orientation === "vertical" && "flex-col"}`}>
+  <a href="#" class="ml-2.5">Home</a>
+  <a href="#" class="ml-2.5">About</a>
+  <a href="#" class="ml-2.5">Our Services</a>
+  <a href="#" class="ml-2.5">Contact Us</a>
 </nav>

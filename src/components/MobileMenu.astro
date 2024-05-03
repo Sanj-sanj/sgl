@@ -3,7 +3,9 @@ import Navigation from "./Navigation.astro";
 ---
 
 <div
-  class="mobile-menu h-[100vh] bg-yellow-200 fixed top-0 right-0 overflow-hidden hidden"
+  class="mobile-menu hidden flex overflow-hidden w-full top-0 absolute h-[100vh] bg-purple-50"
 >
-  <Navigation orientation="vertical" />
+  <div class="bg-yellow-200 w-1/3 right-0 absolute flex h-[100vh] z-50">
+    <Navigation orientation="vertical" />
+  </div>
 </div>
