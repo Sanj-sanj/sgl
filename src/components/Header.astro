@@ -1,12 +1,16 @@
 ---
 import Navigation from "./Navigation.astro";
+import sglLogo from "../assets/sgl-Trucking.webp";
+import { getImage, Image } from "astro:assets";
+const foo = await getImage({ src: sglLogo });
+console.log(foo);
 ---
 
 <header
   class="bg-zinc-200 w-full min-h-[14vh] sticky top-0 flex justify-between items-center px-4"
 >
-  <div class="w-1/4">[logo goes here]</div>
-
+  <img src={foo} width="30" />
+  <!-- <img src={sglLogo.src} width="30" /> -->
   <!-- button opens MobileMenu component, check file for script -->
   <button class="sm:hidden bg-slate-50 rounded-sm p-2"> [ = ] </button>
   <fragment class="hidden sm:flex w-full justify-end">
