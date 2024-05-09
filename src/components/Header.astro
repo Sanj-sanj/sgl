@@ -5,21 +5,39 @@ import { getImage } from "astro:assets";
 const foo = await getImage({ src: sglLogo });
 ---
 
-<header
-  class="bg-zinc-200 w-full min-h-[14vh] sticky top-0 flex justify-between items-center px-4 py-2"
->
-  <span class="w-1/4 min-w-32 max-w-36">
-    <img src={foo.src} />
-  </span>
+<fragment class="flex w-full justify-center">
+  <header
+    class="bg-zinc-200 w-11/12 min-h-[14vh] fixed top-0 flex justify-between items-center px-4 py-2 transition-all duration-1000 ease-in-out"
+  >
+    <span class="w-1/4 min-w-32 max-w-36">
+      <img src={foo.src} />
+    </span>
 
-  <!-- button opens MobileMenu component, check file for script -->
-  <button class="relative w-7 h-auto p-4">
-    <div
-      class="sm:hidden bg-gray-700 rounded-sm w-6 h-0.5 absolute top-0 left-0 after:content-[''] after:w-6 after:h-0.5 after:bg-gray-700 after:absolute after:top-3 after:left-0 before:content-[''] before:w-6 before:h-0.5 before:bg-gray-700 before:absolute before:top-6 before:left-0"
-    >
-    </div>
-  </button>
-  <fragment class="hidden sm:flex w-full justify-end">
-    <Navigation orientation="horizontal" />
-  </fragment>
-</header>
+    <!-- button opens MobileMenu component, check file for script -->
+    <button class="relative w-7 h-auto p-4">
+      <div
+        class="sm:hidden bg-gray-700 rounded-sm w-6 h-0.5 absolute top-0 left-0 after:content-[''] after:w-6 after:h-0.5 after:bg-gray-700 after:absolute after:top-3 after:left-0 before:content-[''] before:w-6 before:h-0.5 before:bg-gray-700 before:absolute before:top-6 before:left-0"
+      >
+      </div>
+    </button>
+    <fragment class="hidden sm:flex w-full justify-end">
+      <Navigation orientation="horizontal" />
+    </fragment>
+  </header>
+</fragment>
+
+<script>
+  document.addEventListener("scroll", (e) => {
+    const currY = window.scrollY;
+    const header = document.querySelector("header");
+    if (currY > 0 && !header?.classList.contains("w-full")) {
+      header?.classList.add("w-full");
+      header?.classList.remove("w-11/12");
+    } else if (currY === 0 && header?.classList.contains("w-full")) {
+      header.classList.remove("w-full");
+      header?.classList.add("w-11/12");
+    } else {
+      console.log("wtf");
+    }
+  });
+</script>
