@@ -5,8 +5,10 @@ import sglTruckingVideo from "../assets/SGL-Trucking-LTD.mp4";
 
 <Layout title="SGL Trucking">
   <!-- HERO -->
-  <video src={sglTruckingVideo} autoplay="true"></video>
-  <!-- HERO END -->
+  <video autoplay muted loop class="h-[100vh] w-full object-fill">
+    <source src={sglTruckingVideo} type="video/mp4" />
+  </video>
+  <!-- HERO -->
   <main class="h-[200vh]">
     <div>testing</div>
     <div>testing</div>
