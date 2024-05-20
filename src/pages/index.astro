@@ -6,11 +6,23 @@ import sglTruckingVideo from "../assets/SGL-Trucking-LTD.mp4";
 <Layout title="SGL Trucking">
   <!-- HERO -->
   <div class="text-white relative h-[100vh] w-full">
-    <video autoplay muted loop class="absolute top-0 object-fill h-[100vh]">
+    <video
+      autoplay
+      muted
+      loop
+      aria-label="DashCam footage of a truckers journey."
+      class="absolute top-0 object-fill h-[100vh] w-full"
+    >
       <source src={sglTruckingVideo} type="video/mp4" />
     </video>
-    <div>
-      <h2 class="">yellow monster</h2>
+    <div
+      class="absolute bottom-1/4 w-full flex justify-center flex-col text-center"
+    >
+      <h1 class="font-bold text-6xl">SGL TRUCKING LTD.</h1>
+      <p class="text-xl font-light">
+        LOGISTICS AND TRUCK TRANSPORT COMPANY IN SURREY / DELTA, BRITISH
+        COLUMBIA
+      </p>
     </div>
   </div>
   <!-- HERO -->

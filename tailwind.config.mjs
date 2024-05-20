@@ -9,6 +9,9 @@ export default {
         "fade-in": "fade-in 150ms ease-in",
         "fade-out": "fade-out 150ms ease-in-out",
       },
+      colors: {
+        "frosted-glass": "rgba(255, 255, 255, .15)",
+      },
       keyframes: {
         "slide-in-left": {
           "0%": { transform: "translateX(6rem)", opacity: "0" },
@@ -26,6 +29,9 @@ export default {
           "0%": { opacity: "1" },
           "100%": { opacity: "0" },
         },
+      },
+      translate: {
+        relativeCenter: "-50% -50%",
       },
     },
   },
