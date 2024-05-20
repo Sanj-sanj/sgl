@@ -11,8 +11,6 @@ export default function PopupNavigation({
   const [visible, setVisible] = useState(<></>);
   const isHoveringPopup = useRef(false);
 
-  const cleanUpRef = useRef<number>();
-
   const popUpMenu = (links: { text: string; path: string }[]) => (
     <div
       className="h-[100vh] absolute top-1/2 left-1/2"
@@ -29,7 +27,7 @@ export default function PopupNavigation({
         {links.map((link) => (
           <li key={link.text} className="min-w-44 w-full">
             <a
-              className="w-full flex justify-center p-1 border-stone-300 [&:nth-child(n+1):nth-last-child(n+1)]:border-b border-x "
+              className="w-full flex justify-center p-1 hover:bg-stone-200 border-stone-300 [&:nth-child(n+1):nth-last-child(n+1)]:border-b border-x "
               href={link.path}
             >
               {link.text}
