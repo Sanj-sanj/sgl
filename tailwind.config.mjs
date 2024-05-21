@@ -8,6 +8,8 @@ export default {
         "slide-out-left": "slide-out-left 150ms ease-in-out",
         "fade-in": "fade-in 150ms ease-in",
         "fade-out": "fade-out 150ms ease-in-out",
+        "spin-slow": "spin 5s linear infinite",
+        "bounce-short": "bounce-short 1s ease-in infinite",
       },
       colors: {
         "frosted-glass": "rgba(255, 255, 255, .15)",
@@ -28,6 +30,16 @@ export default {
         "fade-out": {
           "0%": { opacity: "1" },
           "100%": { opacity: "0" },
+        },
+        "bounce-short": {
+          "0%, 100%": {
+            transform: "translateY(-1%)",
+            "animation-timing-function": "cubic-bezier(.8,2,1,2)",
+          },
+          "50%": {
+            transform: "none",
+            "animation-timing-function": "cubic-bezier(0,0,0.2,5)",
+          },
         },
       },
       translate: {

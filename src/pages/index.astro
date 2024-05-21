@@ -57,17 +57,15 @@ import { Image } from "astro:assets";
         </h3>
         <br />
 
-        <p>
+        <p class="mb-8">
           SGL Trucking Ltd. is a Logistics and Trucking company based in Surrey
           / Delta B.C. Canada. It was established in 2010, since this time we
           have acquired experienced, professional employees/drivers who are
           constantly thriving for excellence. Their motivation has quickly
           turned this company into one of the largest transportation companies
           in The Greater Vancouver Region.
-
-          <br />
-          <br />
-
+        </p>
+        <p>
           SGL trucking Ltd. thrives on meeting our customers' needs. Our
           experience have allowed us to provide our customers with reliable and
           on time service. SGL Trucking Ltd. understands that the transportation
@@ -170,6 +168,7 @@ import { Image } from "astro:assets";
             <div class="border-2 border-sky-500 rounded-full p-4">
               <Image
                 src={hexagon}
+                class="animate-spin-slow"
                 width={56}
                 draggable={false}
                 alt="a hexagon"
@@ -196,6 +195,7 @@ import { Image } from "astro:assets";
             <div class="border-2 border-sky-500 rounded-full p-4">
               <Image
                 src={truckIcon}
+                class="animate-bounce-short"
                 width={56}
                 draggable={false}
                 alt="a truck"
