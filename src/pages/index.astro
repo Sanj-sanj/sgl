@@ -74,22 +74,32 @@ import { Image } from "astro:assets";
         </p>
       </div>
 
-      <div class="w-full flex justify-evenly px-8">
-        <Image
-          src={blueTruckPic}
-          alt="Shot of a blue SGL truck in the winter with haul in tow."
-          width={420}
-        />
-        <Image
-          src={truckFleetPic}
-          alt="Line up shot of the SGL truck cabs"
-          width={420}
-        />
-        <Image
-          src={trailersPic}
-          alt="Line up shot of the SGL dry van trailers plus a cab"
-          width={420}
-        />
+      <div class="w-full flex justify-center">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <Image
+                class="max-w-96"
+                src={blueTruckPic}
+                alt="Shot of a blue SGL truck in the winter with haul in tow."
+              />
+            </div>
+            <div class="swiper-slide">
+              <Image
+                class="max-w-96"
+                src={truckFleetPic}
+                alt="Line up shot of the SGL truck cabs"
+              />
+            </div>
+            <div class="swiper-slide">
+              <Image
+                class="max-w-96"
+                src={trailersPic}
+                alt="Line up shot of the SGL dry van trailers plus a cab"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -244,9 +254,16 @@ import { Image } from "astro:assets";
   </main>
 </Layout>
 
+<script src="../libs/Slider.js"></script>
+
 <style>
   main {
     font-size: 20px;
     line-height: 1.6;
+  }
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 </style>
