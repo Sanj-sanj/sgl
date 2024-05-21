@@ -1,5 +1,5 @@
 ---
-import PopupNavigation from "./PopupNavigation";
+import PopupNavigation from "./react/PopupNavigation";
 
 interface Props {
   orientation: "horizontal" | "vertical";
@@ -8,7 +8,7 @@ interface Props {
 const { orientation } = Astro.props;
 ---
 
-<nav>
+<nav class="w-full flex">
   <ul
     class:list={[
       ` flex text-center items-center`,

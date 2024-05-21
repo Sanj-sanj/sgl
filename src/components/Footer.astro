@@ -1,29 +1,61 @@
-<footer
-  class="w-full bg-slate-700 text-white flex flex-col sm:flex-row justify-between py-8"
->
-  <div class="flex flex-col sm:flex-row w-3/4 justify-evenly">
-    <div class="text-center flex p-4 flex-col w-full">
-      <h4>Head Office</h4>
-      <br />
-      <p>Unit - 202, 11957 80th Ave</p>
-      <p>Delta, BC V4C 0E2</p>
+---
+
+---
+
+<footer class="flex flex-col justify-center w-full bg-zinc-800">
+  <fragment class="w-full text-white flex justify-center pb-6 sm:pb-0">
+    <div class="w-full max-w-[1024px] flex flex-col sm:flex-row">
+      <div
+        class="flex flex-col sm:flex-row w-full text-xl font-light sm:w-3/4 justify-evenly"
+      >
+        <div
+          class="text-center flex p-4 sm:pt-9 flex-col w-full sm:border-r border-slate-500"
+        >
+          <h5 class="pb-3 font-normal">Head Office</h5>
+          <span class="text-sm text-slate-200">
+            <p class="pb-2">Unit - 202, 11957 80th Ave</p>
+            <p class="pb-2">Delta, BC V4C 0E2</p>
+          </span>
+        </div>
+
+        <div class="text-center flex p-4 sm:pt-9 flex-col w-full">
+          <h5 class="pb-3 font-normal">Contact Details</h5>
+          <span class="text-sm text-slate-200">
+            <a class="pb-2" href="tel:+1-604-572-1224">(604) 572-1224</a>
+            <a class="='pb-2'" href="mailto:info@sgltrucking.com">
+              Info@sgltrucking.com
+            </a>
+          </span>
+        </div>
+
+        <div
+          class="text-center flex p-4 sm:pt-9 flex-col w-full sm:border-l border-slate-500"
+        >
+          <h5 class="pb-3 font-normal">Office Hours</h5>
+          <span class="text-sm">
+            <p class="pb-2">Monday - Friday</p>
+            <p class="pb-2">9:00 AM - 5:00 PM</p>
+            <p class="pb-2">Saturday & Sunday</p>
+            <p class="pb-2">Closed</p>
+          </span>
+        </div>
+      </div>
+
+      <div
+        class="w-full sm:w-2/6 text-center text-3xl flex items-center justify-center flex-col"
+      >
+        <p class="text-sm pb-2">MC Number: MC-739429</p>
+        <p class="text-sm pb-2">US DOT: 2121810</p>
+        <p>SGL TRUCKING LTD.</p>
+        <p class="text-sm pb-2">© SGL Trucking Ltd.</p>
+      </div>
     </div>
-    <div class="text-center flex p-4 flex-col w-full">
-      <h4>Contact Details</h4>
-      <br />
-      <p>Call us at: (604) 572-1224</p>
-      <br />
-      <p>Email: info@sgltrucking.com</p>
-    </div>
-    <div class="text-center flex p-4 flex-col w-full">
-      <h4>Office Hours</h4>
-      <br />
-      <p>Monday - Friday</p>
-      <p>9:00 AM - 5:00 PM</p>
-      <br />
-      <p>Saturday & Sunday</p>
-      <p>Closed</p>
-    </div>
+  </fragment>
+  <div class="bg-zinc-900 flex justify-between text-stone-600 px-2 text-sm">
+    <p>Made by Sanjeet</p>
+    <p>
+      Developed with
+      <a class="text-indigo-400" href="https://astro.build/"> Astro </a>
+    </p>
   </div>
-  <div class="w-2/6 text-center text-3xl">SGL TRUCKING LTD.</div>
 </footer>

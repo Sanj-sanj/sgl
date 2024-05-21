@@ -1,6 +1,13 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import sglTruckingVideo from "../assets/SGL-Trucking-LTD.mp4";
+import truckIcon from "../assets/truck.svg";
+import hexagon from "../assets/hexagon.svg";
+import canUsImage from "../assets/us-canada.png";
+import trailersPic from "../assets/cropped-sgl-trailer.webp";
+import blueTruckPic from "../assets/cropped-sgl-truck-3.webp";
+import truckFleetPic from "../assets/cropped-sgl-TRUCK-6.webp";
+import { Image } from "astro:assets";
 ---
 
 <Layout title="SGL Trucking">
@@ -16,22 +23,37 @@ import sglTruckingVideo from "../assets/SGL-Trucking-LTD.mp4";
       <source src={sglTruckingVideo} type="video/mp4" />
     </video>
     <div
-      class="absolute bottom-1/4 w-full flex justify-center flex-col text-center px-4"
+      class="absolute bottom-0 h-[37vh] mb-1 w-full flex justify-center items-center flex-col text-center px-4"
     >
       <h1 class="text-4xl sm:text-6xl mb-2">SGL TRUCKING LTD.</h1>
       <p class="text-base sm:text-xl font-light">
         LOGISTICS AND TRUCKING COMPANY IN SURREY / DELTA, BRITISH COLUMBIA
       </p>
+
+      <div
+        class="flex flex-col sm:flex-row justify-center items-center h-full w-full max-w-[800px]"
+      >
+        <button
+          class="border-2 bg-sky-500 text-base py-2 px-6 text-slate-50 transition-colors hover:bg-blue-500 rounded-3xl p-13 w-1/2 max-w-44 sm:mr-2"
+        >
+          Work with us</button
+        >
+        <button
+          class="border-2 border-slate-200 text-base py-2 px-6 text-slate-50 transition-colors hover:bg-frosted-glass rounded-3xl p-13 mt-6 sm:mt-0 w-1/2 max-w-44 sm:ml-2"
+        >
+          Request a Quote</button
+        >
+      </div>
     </div>
   </div>
   <!-- HERO END -->
 
   <main class="h-auto text-stone-600 text-center">
-    <div class="w-full bg-slate-100 pt-12">
+    <div class="w-full bg-slate-100 py-12">
       <div class="m-auto p-4 max-w-[calc(100% - 2rem)] max-w-[800px]">
-        <h2 class="text-4xl text-stone-800">SGL Trucking Ltd.</h2>
+        <h2 class="text-4xl text-stone-800 pb-1">SGL Trucking Ltd.</h2>
         <h3 class="text-2xl text-stone-800">
-          A trucking Company situated in Surrey / Delta B.C.
+          Dry Van Trucking Company situated in Surrey / Delta B.C.
         </h3>
         <br />
 
@@ -46,16 +68,34 @@ import sglTruckingVideo from "../assets/SGL-Trucking-LTD.mp4";
           <br />
           <br />
 
-          SGL trucking Ltd. thrives on meeting our customers’ needs. Our
+          SGL trucking Ltd. thrives on meeting our customers' needs. Our
           experience have allowed us to provide our customers with reliable and
           on time service. SGL Trucking Ltd. understands that the transportation
           industry is constantly advancing and in order to remain competitive
           and effective we are continuously expanding our services.
         </p>
       </div>
+
+      <div class="w-full flex justify-evenly px-8">
+        <Image
+          src={blueTruckPic}
+          alt="Shot of a blue SGL truck in the winter with haul in tow."
+          width={420}
+        />
+        <Image
+          src={truckFleetPic}
+          alt="Line up shot of the SGL truck cabs"
+          width={420}
+        />
+        <Image
+          src={trailersPic}
+          alt="Line up shot of the SGL dry van trailers plus a cab"
+          width={420}
+        />
+      </div>
     </div>
 
-    <div class="w-full bg-stone-200 pt-12">
+    <div class="w-full pt-12 z-10 relative">
       <div class="m-auto p-4 max-w-[calc(100% - 2rem)] max-w-[800px]">
         <h3 class="text-4xl text-center text-stone-800">
           Why choose SGL Trucking LTD?
@@ -79,9 +119,15 @@ import sglTruckingVideo from "../assets/SGL-Trucking-LTD.mp4";
         </p>
       </div>
     </div>
-
-    <div class="w-full bg-stone-200 pt-12">
-      <div class="m-auto p-4 max-w-[calc(100% - 2rem)] max-w-[800px]">
+    <div class="relative w-full z-0">
+      <Image
+        class="absolute sm:min-w-fit right-0 translate-y-[-30rem] transform z-0 opacity-35"
+        src={canUsImage}
+        alt="Image showing the connection of Canada and the US"
+      />
+    </div>
+    <div class="w-full relative py-12 z-10">
+      <div class="m-auto p-4 max-w-[calc(100% - 2rem)] max-w-[800px] z-10">
         <h3 class="text-4xl text-center text-stone-800">
           Freight all over the US and Canada.
         </h3>
@@ -116,13 +162,15 @@ import sglTruckingVideo from "../assets/SGL-Trucking-LTD.mp4";
         </p>
       </div>
 
-      <div class="flex flex-col pt-4 sm:pt-0">
+      <div class="flex flex-col sm:pt-0 mb-10">
         <div
-          class="text-left m-auto p-4 flex flex-col sm:flex-row min-w-[calc(100% - 2rem)] max-w-[800px]"
+          class="text-left mx-auto mb-4 p-4 pt-0 flex flex-col sm:flex-row min-w-[calc(100% - 2rem)] max-w-[800px]"
         >
-          <div class="w-full sm:w-1/2 px-1.5">
-            cool img here
-            <h3 class="text-2xl text-center text-stone-800">
+          <div class="w-full sm:w-1/2 px-1.5 flex flex-col items-center pt-4">
+            <div class="border-2 border-sky-500 rounded-full p-4">
+              <Image src={hexagon} width={56} alt="a hexagon" />
+            </div>
+            <h3 class="text-2xl text-center text-stone-800 pt-2">
               Company Expectations
             </h3>
             <br />
@@ -134,14 +182,16 @@ import sglTruckingVideo from "../assets/SGL-Trucking-LTD.mp4";
               control equipment to reduce carbon footprint. Our fleet is
               maximally maintained to ensure efficient operation. Our drivers
               are actively trained to employ our environmental policies.
-              Conservation, reduction, reusing and recylcing are used whenever
+              Conservation, reduction, reusing and recycling are used whenever
               possible along with our constant search of new technologies and
               innovative practices to limit waste and usage of resources.
             </p>
           </div>
-          <div class="w-full sm:w-1/2 px-1.5">
-            cool img here
-            <h3 class="text-2xl text-center text-stone-800">
+          <div class="w-full sm:w-1/2 px-1.5 flex flex-col items-center pt-4">
+            <div class="border-2 border-sky-500 rounded-full p-4">
+              <Image src={truckIcon} width={56} alt="a truck" />
+            </div>
+            <h3 class="text-2xl text-center text-stone-800 pt-2">
               Driver Expectations
             </h3>
             <br />
@@ -151,30 +201,22 @@ import sglTruckingVideo from "../assets/SGL-Trucking-LTD.mp4";
               We encourage our drivers to drive at the posted speed limits. Our
               drivers are also directed to leave their trash in proper waste
               disposal containers and recycle bottles and other recyclables
-              wherever possible while out on a trip.Speeding is the number one
-              source of poor fuel mileage and unnecessary carbon emissions that
-              is within the driver's control. We encourage our drivers to drive
-              at the posted speed limits. Our drivers are also directed to leave
-              their trash in proper waste disposal containers and recycle
-              bottles and other recyclables wherever possible while out on a
-              trip.
+              wherever possible while out on a trip.
             </p>
           </div>
         </div>
         <div>
           <button
-            class="bg-orange-600 text-base py-2 px-6 rounded text-slate-50 transition-colors hover:bg-orange-500"
+            class="bg-amber-600 text-base py-2 px-6 rounded text-white transition-colors hover:bg-orange-500"
             >Read More
           </button>
         </div>
-        <br />
-        <br />
       </div>
 
       <div class="w-full bg-sky-600 py-6 text-slate-50">
         <div class="m-auto p-4 max-w-[calc(100% - 2rem)]">
           <h3 class="text-3xl text-center">Are you looking for work?</h3>
-          <h2 class="text-2xl text-center">We are hiring!</h2>
+          <h4 class="text-2xl text-center">We are hiring!</h4>
           <br />
           <p class="text-base">
             Do you have a Class 1 License with Air brake certificate?
@@ -183,7 +225,7 @@ import sglTruckingVideo from "../assets/SGL-Trucking-LTD.mp4";
           </p>
           <div class="w-full flex justify-center mt-4">
             <button
-              class="bg-orange-600 text-base py-2 px-6 rounded text-slate-50 transition-colors hover:bg-orange-500"
+              class="bg-amber-600 text-base py-2 px-6 rounded text-white transition-colors hover:bg-orange-500"
               >Apply Today</button
             >
           </div>
