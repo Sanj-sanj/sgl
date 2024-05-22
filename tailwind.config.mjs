@@ -13,7 +13,7 @@ export default {
       },
       colors: {
         "frosted-glass": "rgba(255, 255, 255, .15)",
-        "frosted-glass-dark": "rgba(255, 255, 255, .7)",
+        "frosted-glass-light": "rgba(255, 255, 255, .8)",
       },
       keyframes: {
         "slide-in-left": {

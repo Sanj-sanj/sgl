@@ -6,7 +6,7 @@ import { Image } from "astro:assets";
 
 <fragment class="flex w-full fixed justify-center min-h-[11vh] z-50">
   <header
-    class="bg-frosted-glass-dark text-black w-11/12 flex justify-between items-center px-4 py-2 transition-all duration-500 ease-in-out rounded-b-md border-b-2 border-x border-cyan-600 shadow-lg shadow-rose-800"
+    class="bg-frosted-glass-light text-black w-11/12 flex justify-between items-center px-4 py-2 transition-all duration-500 ease-in-out rounded-b-md border-b-2 border-x border-cyan-600 shadow-lg shadow-rose-800"
   >
     <span class="w-1/4 min-w-32 max-w-36">
       <Image src={sglLogo} alt="SGL Trucking LTD." />
@@ -36,14 +36,11 @@ import { Image } from "astro:assets";
 
     if (vidHeight)
       if (currY > vidHeight - 150) {
-        header?.classList.add("bg-slate-100");
+        header?.classList.add("bg-white");
         header?.classList.add("text-black");
-      } else if (
-        header?.classList.contains("bg-slate-100") &&
-        currY < vidHeight
-      ) {
+      } else if (header?.classList.contains("bg-white") && currY < vidHeight) {
         header?.classList.remove("text-black");
-        header?.classList.remove("bg-slate-100");
+        header?.classList.remove("bg-white");
       }
 
     if (currY > 0 && !header?.classList.contains("w-full")) {
