@@ -1,4 +1,4 @@
-import { Fragment, useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 export default function PopupNavigation({
   text,
   subTexts,
@@ -65,8 +65,9 @@ export default function PopupNavigation({
     );
 
   return (
-    <div className="relative h-auto sm:w-auto w-full">
+    <div className="relative h-auto md:w-auto w-full ">
       <li
+        className={`md:ml-2.5 text-center px-2 relative md:flex${(orientation === "vertical" && " w-full py-4") || ""}`}
         onMouseMove={() => {
           orientation === "horizontal" && setVisible(popUpMenu(subTexts));
         }}
@@ -80,7 +81,6 @@ export default function PopupNavigation({
         onClick={() =>
           orientation === "vertical" && setVisible(popUpMenu(subTexts))
         }
-        className={`sm:ml-2.5 text-center px-2  relative flex${(orientation === "vertical" && "w-full py-4") || ""}`}
       >
         <button data-dropdown="true" id={text}>
           {text} <span className="font-bold">▼</span>

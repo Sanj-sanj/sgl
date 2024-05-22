@@ -6,14 +6,17 @@ import { Image } from "astro:assets";
 
 <fragment class="flex w-full fixed justify-center min-h-[11vh] z-50">
   <header
-    class="bg-frosted-glass text-slate-100 w-11/12 flex justify-between items-center px-4 py-2 transition-all duration-500 ease-in-out rounded-b-md border-b-2 border-x border-cyan-600 shadow-lg shadow-rose-800"
+    class="bg-frosted-glass-dark text-black w-11/12 flex justify-between items-center px-4 py-2 transition-all duration-500 ease-in-out rounded-b-md border-b-2 border-x border-cyan-600 shadow-lg shadow-rose-800"
   >
     <span class="w-1/4 min-w-32 max-w-36">
       <Image src={sglLogo} alt="SGL Trucking LTD." />
     </span>
 
     <!-- button opens MobileMenu component, check file for script -->
-    <button class="relative w-7 h-auto p-4" aria-label="Mobile menu button">
+    <button
+      class="relative w-7 h-auto p-4 mr-4 mt-2"
+      aria-label="Mobile menu button"
+    >
       <div
         class="md:hidden bg-gray-700 rounded-sm w-6 h-0.5 absolute top-0 left-0 after:content-[''] after:w-6 after:h-0.5 after:bg-gray-700 after:absolute after:top-2.5 after:left-0 before:content-[''] before:w-6 before:h-0.5 before:bg-gray-700 before:absolute before:top-5 before:left-0"
       >
@@ -32,7 +35,7 @@ import { Image } from "astro:assets";
     const header = document.querySelector("header");
 
     if (vidHeight)
-      if (currY > vidHeight) {
+      if (currY > vidHeight - 150) {
         header?.classList.add("bg-slate-100");
         header?.classList.add("text-black");
       } else if (
