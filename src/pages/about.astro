@@ -1,29 +1,124 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import truckPic from "../assets/truck-in-distance.avif";
+import { Image } from "astro:assets";
 ---
 
 <Layout title="SGL Trucking LTD. - About Us">
-  <main>
-    <div class="pt-[12vh] w-full bg-sky-500"></div>
-    <div class="h-[25vh] flex justify-center items-center bg-sky-500">
-      <h1>About Us</h1>
+  <!-- Filler content for the sapce  behind the header -->
+  <div class="pt-[12vh] w-full bg-gradient-to-r from-blue-500 to-[#7badff]">
+  </div>
+  <div
+    class="h-[65vh] flex justify-center items-center relative bg-sky-400"
+    id="hero"
+  >
+    <div
+      class="z-10 w-full text-center drop-shadow-[-10_1.2px_1.2px_rgba(255,255,255,0.8)] text-slate-100"
+    >
+      <h1 class="text-4xl sm:text-6xl mb-2 z-10">About Us</h1>
+      <p class="text-base md:text-2xl">
+        Who we are, our mission, and how we do it.
+      </p>
     </div>
-    <p>
-      About SGL Trucking Ltd. SGL Trucking was established in 2010. Since this
-      time we have acquired experienced, professional employees who are
-      constantly thriving for excellence. Their motivation has quickly turned
-      this company into one of the largest transportation companies in The
-      Greater Vancouver Region. SGL trucking Ltd. thrives on meeting our
-      customers' needs. Our experience have allowed us to provide our customers
-      with reliable and on time service. SGL Trucking Ltd. understands that the
-      transportation industry is constantly advancing and in order to remain
-      competitive and effective we are continuously expanding our services. SGL
-      Trucking Ltd. has emerged as a leading international truckload carrier in
-      Canada and the United States of America. By blending the latest in
-      trucking and transport technology with the traditional values of quality
-      services, on-time delivery and responding to the needs of the customer,
-      our company has become the service carrier of choice. SGL Trucking Ltd is
-      the reliable source for all your trucking and transportation needs.
-    </p>
+    <Image
+      class="absolute top-0 h-full object-cover"
+      src={truckPic}
+      alt="Scenic image of a truck driving up a road."
+    />
+  </div>
+  <main class="h-auto text-stone-700 text-center">
+    <div class="bg-white w-full flex justify-center">
+      <div class="w-full py-12 max-w-[800px]">
+        <div class="m-auto p-4">
+          <h2 class="text-stone-800 text-4xl pb-6">Who are we?</h2>
+          <p>
+            SGL Trucking, was established in 2010 by Lakhbir - (Lucky) Lodhra in
+            his home. Starting as an owner operator, Lucky has been continuously
+            expanding his knowledge, fine tuning his skills and procurring
+            talent to further his buisness. Since then, we have acquired
+            experienced, professional employees who are constantly thriving for
+            excellence. Their motivation has quickly turned this company into
+            one of the largest and most reliable transportation companies in The
+            Greater Vancouver Region.
+          </p>
+        </div>
+        <div class="m-auto p-4">
+          <h2 class="text-stone-800 text-4xl pb-6">Our mission</h2>
+          <p>
+            We at SGL Trucking Ltd. understand that transportation and logistics
+            is a multi-faceted operation. Success as a carrier thrives on
+            exceeding our customers' needs, to foster meaningful relations
+            carrier and custome relationships. Our experience have allowed us to
+            provide our customers with reliable and on time service. SGL
+            Trucking Ltd. understands that the transportation industry is
+            constantly advancing and in order to remain competitive and
+            effective we are continuously expanding our services. SGL Trucking
+            Ltd. has emerged as a leading international truckload carrier in
+            Canada and the United States of America. By blending the latest in
+            trucking and transport technology with the traditional values of
+            quality services, on-time delivery and responding to the needs of
+            the customer, our company has become the service carrier of choice.
+            SGL Trucking Ltd is the number one reliable source for all your
+            trucking and transportation needs!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-full flex justify-center bg-stone-100">
+      <div class="w-full py-12 max-w-[800px]">
+        <div class="m-auto p-4">
+          <h2 class="text-stone-800 text-4xl pb-6">Our Services</h2>
+          <p>
+            SGL Trucking Ltd. exceeds customer's expectations in the
+            transportation of our goods and documents across the continent. We
+            deliver value to our customers by providing the most reliable and
+            efficient solutions in distribution and logistics.
+          </p>
+          <br />
+          <p>
+            We offer a personal touch in client relationships and a dynamic
+            working environment. We take pride in the professionalism and
+            efficiency of our staff and drivers. All employees and clients are
+            treated with the utmost respect and are encouraged to develop their
+            own initiatives.
+          </p>
+          <br />
+          <p>
+            Meeting and going beyond your transportation requirements between
+            Canada and key US cities is a core service of our company. We have
+            the resources, technology, coverage and capacity to meet your every
+            need. Using our own tractors and trailers allows SGL Trucking Ltd.
+            to maintain the highest level of quality control ensuring safe,
+            reliable and timely transport of our customer's important loads.
+          </p>
+        </div>
+
+        <div class="m-auto p-4">
+          <h2 class="text-stone-800 text-4xl pb-6">What do we offer?</h2>
+          <ul class="list-disc text-left px-4 flex flex-col sm:flex-row">
+            <div class="px-2 sm:w-1/2">
+              <li>
+                Provide security, assurance and overall a better experience to
+                our clients.
+              </li>
+              <li>
+                Always on time and making sure we never fall behind in our
+                mission to satisfy our clients.
+              </li>
+              <li>
+                SGL Trucking Ltd. always meets the needs of our customers.
+              </li>
+            </div>
+            <div class="px-2 sm:w-1/2">
+              <li>Brand New Equipment to meet every need.</li>
+              <li>We provide 24 hour dispatching services.</li>
+              <li>Secured facility that is under constant surveillance.</li>
+              <li>Provide 24 hour support to satisfy our customers.</li>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
   </main>
 </Layout>

@@ -5,7 +5,7 @@ import { Image } from "astro:assets";
 ---
 
 <fragment
-  class="flex w-full fixed justify-center min-h-[12vh] max-h-[12vh] z-50"
+  class="flex w-full fixed justify-center min-h-[6rem] h-[12vh] max-h-[12vh] z-50"
 >
   <header
     class="bg-frosted-glass-light text-black w-11/12 flex justify-between items-center px-4 py-2 transition-all duration-500 ease-in-out rounded-b-md border-b-2 border-x border-cyan-600 shadow-lg shadow-rose-800"
@@ -33,14 +33,14 @@ import { Image } from "astro:assets";
 <script>
   document.addEventListener("scroll", () => {
     const currY = window.scrollY;
-    const vidHeight = document.querySelector("video")?.scrollHeight;
+    const heroHeight = document.querySelector("#hero")?.scrollHeight;
     const header = document.querySelector("header");
 
-    if (vidHeight)
-      if (currY > vidHeight - 150) {
+    if (heroHeight)
+      if (currY > heroHeight - 150) {
         header?.classList.add("bg-white");
         header?.classList.add("text-black");
-      } else if (header?.classList.contains("bg-white") && currY < vidHeight) {
+      } else if (header?.classList.contains("bg-white") && currY < heroHeight) {
         header?.classList.remove("text-black");
         header?.classList.remove("bg-white");
       }
