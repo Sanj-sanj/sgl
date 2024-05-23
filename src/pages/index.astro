@@ -27,8 +27,10 @@ import { Image } from "astro:assets";
     <div
       class="absolute bottom-0 h-[37vh] mb-1 w-full flex justify-center items-center flex-col text-center px-4"
     >
-      <h1 class="text-4xl sm:text-6xl mb-2">SGL TRUCKING LTD.</h1>
-      <p class="text-base sm:text-xl font-light">
+      <h1 class="text-4xl sm:text-6xl mb-2" id="hero-title">
+        SGL TRUCKING LTD.
+      </h1>
+      <p class="text-base sm:text-xl font-light" id="hero-title">
         LOGISTICS AND TRUCKING COMPANY IN SURREY / DELTA, BRITISH COLUMBIA
       </p>
 
@@ -308,5 +310,8 @@ import { Image } from "astro:assets";
     display: flex;
     justify-content: center;
     width: 100%;
+  }
+  #hero-title {
+    text-shadow: black 2px 2px 4px;
   }
 </style>
