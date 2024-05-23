@@ -30,20 +30,7 @@ import { Image } from "astro:assets";
     <div class="bg-white w-full flex justify-center">
       <div class="w-full py-12 max-w-[800px]">
         <div class="m-auto p-4">
-          <h2 class="text-stone-800 text-4xl pb-6">Who are we?</h2>
-          <p>
-            SGL Trucking, was established in 2010 by Lakhbir - (Lucky) Lodhra in
-            his home. Starting as an owner operator, Lucky has been continuously
-            expanding his knowledge, fine tuning his skills and procurring
-            talent to further his buisness. Since then, we have acquired
-            experienced, professional employees who are constantly thriving for
-            excellence. Their motivation has quickly turned this company into
-            one of the largest and most reliable transportation companies in The
-            Greater Vancouver Region.
-          </p>
-        </div>
-        <div class="m-auto p-4">
-          <h2 class="text-stone-800 text-4xl pb-6">Our mission</h2>
+          <h2 class="text-stone-800 text-4xl pb-6">Our Mission</h2>
           <p>
             We at SGL Trucking Ltd. understand that transportation and logistics
             is a multi-faceted operation. Success as a carrier thrives on
@@ -62,10 +49,24 @@ import { Image } from "astro:assets";
             trucking and transportation needs!
           </p>
         </div>
+        <div class="m-auto p-4">
+          <h2 class="text-stone-800 text-4xl pb-6">Who are we?</h2>
+          <p>
+            SGL Trucking, was established in 2010 by Lakhbir - (Lucky) Lodhra in
+            his home. Starting as an owner operator, Lucky has been continuously
+            expanding his knowledge, fine tuning his skills and procurring
+            talent to further his buisness. Since then, we have acquired
+            experienced, professional employees who are constantly thriving for
+            excellence. Their motivation has quickly turned this company into
+            one of the largest and most reliable transportation companies in The
+            Greater Vancouver Region.
+          </p>
+        </div>
       </div>
     </div>
 
-    <div class="w-full flex justify-center bg-stone-100">
+    <div class="w-full flex justify-center bg-stone-100 relative">
+      <div class="h-4 absolute -top-14" id="services"></div>
       <div class="w-full py-12 max-w-[800px]">
         <div class="m-auto p-4">
           <h2 class="text-stone-800 text-4xl pb-6">Our Services</h2>
@@ -97,7 +98,7 @@ import { Image } from "astro:assets";
         <div class="m-auto p-4">
           <h2 class="text-stone-800 text-4xl pb-6">What do we offer?</h2>
           <ul class="list-disc text-left px-4 flex flex-col sm:flex-row">
-            <div class="px-2 sm:w-1/2">
+            <div class="px-4 sm:w-1/2 [&_li]:py-1 sm:[&_li]:py-2">
               <li>
                 Provide security, assurance and overall a better experience to
                 our clients.
@@ -110,13 +111,83 @@ import { Image } from "astro:assets";
                 SGL Trucking Ltd. always meets the needs of our customers.
               </li>
             </div>
-            <div class="px-2 sm:w-1/2">
-              <li>Brand New Equipment to meet every need.</li>
-              <li>We provide 24 hour dispatching services.</li>
+            <div class="px-4 sm:w-1/2 [&_li]:py-1 sm:[&_li]:py-2">
+              <li>Brand new equipment to meet every need.</li>
+              <li>24 hour dispatching services.</li>
               <li>Secured facility that is under constant surveillance.</li>
-              <li>Provide 24 hour support to satisfy our customers.</li>
+              <li>24 hour support to satisfy our customers.</li>
             </div>
           </ul>
+        </div>
+      </div>
+    </div>
+    <div class="w-full flex justify-center bg-stone-200 relative">
+      <div class="h-4 absolute -top-14" id="environment"></div>
+      <div class="w-full py-12 max-w-[800px]">
+        <div class="m-auto p-4">
+          <h2 class="text-stone-800 text-4xl pb-6">Environmental Policy</h2>
+          <p>
+            SGL Trucking Ltd. is commited to the preservation and safe-guarding
+            of the environment. We are committed to developing and operating an
+            accordance to the systems that set the high standards of pollution
+            prevention, environmental conservation, and legal compliance and
+            regulations.
+          </p>
+        </div>
+
+        <div class="m-auto p-4">
+          <h2 class="text-stone-800 text-4xl pb-2">How do we do it?</h2>
+          <div class="flex flex-col sm:flex-row">
+            <div class="sm:w-1/2">
+              <h3 class="text-stone-800 text-2xl pt-6 pb-2">
+                Company Expectations
+              </h3>
+              <ul class="list-disc text-left px-4">
+                <div class="px-4 [&_li]:py-1 sm:[&_li]:py-2">
+                  <li>
+                    Employment of a truck and trailer maintenance program which
+                    ensures used parts, waste oil and any other by-products are
+                    disposed of and recycled in a responsible manner.
+                  </li>
+                  <li>
+                    Trucks are outfitted with all EPA (Environment Protection
+                    Agency) emissions control equipment to reduce carbon
+                    footprint.
+                  </li>
+                  <li>
+                    Fleet is maximally maintained to ensure efficient operation.
+                  </li>
+                  <li>
+                    Training of team members so that they may actively
+                    participate in and employ our environmental policies.
+                  </li>
+                  <li>
+                    Training of team members so that they may actively
+                    participate in and employ our environmental policies.
+                  </li>
+                  <li>
+                    Adoption of new technology and innovative practices which
+                    limit waste and resource usage.
+                  </li>
+                </div>
+              </ul>
+            </div>
+            <div class="px-4 sm:w-1/2">
+              <h3 class="text-2xl pt-6 pb-2 text-stone-800">
+                Driver Expectations
+              </h3>
+              <p class="py-2">
+                Speeding is easily one of the highest source of poor fuel
+                mileage and therefore unnecessary carbon emissions. This is
+                something that is within the driver's control. We encourage our
+                drivers to depart in a timely fashion and drive at the posted
+                speed limits. Furthermore, our drivers are also understanding of
+                their carbon footprint and are aware of the proper way to
+                dispose of waste and recycle bottles and other recyclables
+                wherever possible while out on a trip.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
