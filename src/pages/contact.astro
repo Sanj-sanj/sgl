@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import truckPic from "../assets/truck-bw.avif";
+import ContactForm from "../components/ContactForm.astro";
 
 const key = import.meta.env.public_maps;
 ---
@@ -63,7 +64,7 @@ const key = import.meta.env.public_maps;
             </div>
           </div>
 
-          <div class="m-auto p-4 relative flex justify-center">
+          <div class="m-auto p-4 relative flex justify-center mb-6">
             <iframe
               width="600"
               height="450"
@@ -74,11 +75,9 @@ const key = import.meta.env.public_maps;
               src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ7RJIO23ZhVQRZcmKC6QsK8U&key=${key}`}
             ></iframe>
           </div>
-
-          <div class="m-auto p-4 relative bg-slate-200">
-            <h2>Contact Form</h2>
-          </div>
+          <ContactForm />
         </div>
+        <!--  -->
       </div>
     </div>
     <div class="bg-sky-600 text-slate-50 w-full flex justify-center">
