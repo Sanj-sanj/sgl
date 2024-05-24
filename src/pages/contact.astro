@@ -2,6 +2,8 @@
 import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import truckPic from "../assets/truck-bw.avif";
+
+const key = import.meta.env.public_maps;
 ---
 
 <Layout title="SGL Trucking LTD. - Contact Us">
@@ -60,7 +62,27 @@ import truckPic from "../assets/truck-bw.avif";
               </div>
             </div>
           </div>
+
+          <div class="m-auto p-4 relative flex justify-center">
+            <iframe
+              width="600"
+              height="450"
+              style="border:0"
+              loading="lazy"
+              title="maps"
+              allowfullscreen
+              src={`https://www.google.com/maps/embed/v1/place?q=place_id:ChIJ7RJIO23ZhVQRZcmKC6QsK8U&key=${key}`}
+            ></iframe>
+          </div>
+
+          <div class="m-auto p-4 relative bg-slate-200">
+            <h2>Contact Form</h2>
+          </div>
         </div>
+      </div>
+    </div>
+    <div class="bg-stone-200 w-full flex justify-center">
+      <div class="py-12 max-w-[800px]">
         <div class="m-auto p-4 relative">
           <div class="h-4 absolute -top-14" id="careers"></div>
           <h2 class="text-stone-800 text-4xl pb-6">Join our team!</h2>
