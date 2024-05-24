@@ -2,13 +2,13 @@
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import MobileMenu from "../components/MobileMenu.astro";
+import SocialMediaButton from "../components/react/SocialMediaButton";
 
 interface Props {
   title: string;
 }
 
 const { title } = Astro.props;
-let isMobileView = false;
 ---
 
 <!doctype html>
@@ -47,6 +47,7 @@ let isMobileView = false;
     <!-- FOOTER -->
     <Footer />
   </body>
+  <SocialMediaButton client:load={true} />
 </html>
 
 <style is:global>
