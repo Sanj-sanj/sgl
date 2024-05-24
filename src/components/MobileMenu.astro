@@ -17,11 +17,13 @@ import Navigation from "./Navigation.astro";
   const menu = document.querySelector(".mobile-menu");
 
   //Handle MobileMenu Hamburger icon, shows the menu and hides overflow
-  document.querySelector("button")?.addEventListener("click", () => {
-    overlay?.classList.remove("hidden");
-    menu?.classList.add("animate-slide-in-left");
-    document.querySelector("html")?.classList.toggle("overflow-hidden");
-  });
+  document
+    .querySelector("button[id=mobile-menu]")
+    ?.addEventListener("click", () => {
+      overlay?.classList.remove("hidden");
+      menu?.classList.add("animate-slide-in-left");
+      document.querySelector("html")?.classList.toggle("overflow-hidden");
+    });
 
   // handles closing the menu by clicking the overlay
   overlay?.addEventListener("click", (e) => {

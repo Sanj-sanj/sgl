@@ -169,7 +169,8 @@ import { Image } from "astro:assets";
       </div>
       <div class="relative w-full">
         <Image
-          class="absolute sm:min-w-fit right-0 translate-y-[-30rem] transform -z-10 opacity-35"
+          class="absolute sm:min-w-fit right-0 translate-y-[-30rem] transform -z-10 opacity-25 select-none"
+          draggable="false"
           src={canUsImage}
           alt="Image showing the connection of Canada and the US"
         />
@@ -303,16 +304,9 @@ import { Image } from "astro:assets";
 <script src="../libs/Slider.js"></script>
 
 <style>
-  main {
-    font-size: 20px;
-    line-height: 1.6;
-  }
   .swiper-slide {
     display: flex;
     justify-content: center;
     width: 100%;
-  }
-  #hero-title {
-    text-shadow: black 2px 2px 4px;
   }
 </style>

@@ -10,14 +10,17 @@ import { Image } from "astro:assets";
   <header
     class="bg-frosted-glass-light text-black w-11/12 flex justify-between items-center px-4 py-2 transition-all duration-500 ease-in-out rounded-b-md border-b-2 border-x border-cyan-600 shadow-lg shadow-rose-800"
   >
-    <span class="w-1/4 min-w-32 max-w-36">
-      <Image src={sglLogo} alt="SGL Trucking LTD." />
-    </span>
+    <button class="w-1/4 min-w-32 max-w-36">
+      <a href="/">
+        <Image src={sglLogo} alt="SGL Trucking LTD." />
+      </a>
+    </button>
 
     <!-- button opens MobileMenu component, check file for script -->
     <button
       class="relative w-7 h-auto p-4 mr-4 mt-2"
       aria-label="Mobile menu button"
+      id="mobile-menu"
     >
       <div
         class="md:hidden bg-gray-700 rounded-sm w-6 h-0.5 absolute top-0 left-0 after:content-[''] after:w-6 after:h-0.5 after:bg-gray-700 after:absolute after:top-2.5 after:left-0 before:content-[''] before:w-6 before:h-0.5 before:bg-gray-700 before:absolute before:top-5 before:left-0"
