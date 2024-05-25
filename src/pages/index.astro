@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import sglTruckingVideo from "../assets/SGL-Trucking-LTD.mp4";
+import sglTruckingVideo from "../assets/sgl-trucking-ltd.webm";
+import sglTruckingVideoWebp from "../assets/sgl-Trucking-vid.webp";
 import truckIcon from "../assets/truck.svg";
 import hexagon from "../assets/hexagon.svg";
 import canUsImage from "../assets/us-canada.png";
@@ -11,19 +12,26 @@ import coolTruckPic from "../assets/cool-truck.avif";
 
 import { Image } from "astro:assets";
 import ContactForm from "../components/ContactForm.astro";
+import Hiring from "../components/Hiring.astro";
 ---
 
 <Layout title="SGL Trucking LTD. - Home">
   <!-- HERO -->
   <div class="text-white relative h-[100vh] w-full" id="hero">
+    <!-- <img
+      class="absolute top-0 object-fill h-[100vh] w-full"
+      src={sglTruckingVideoWebp.src}
+      alt="l"
+    /> -->
     <video
       autoplay
       muted
       loop
+      playsinline
       aria-label="DashCam footage of a truckers journey."
       class="absolute top-0 object-fill h-[100vh] w-full"
     >
-      <source src={sglTruckingVideo} type="video/mp4" />
+      <source src={sglTruckingVideo} type="video/webm" />
     </video>
     <div
       class="absolute bottom-0 h-[37vh] mb-1 w-full flex justify-center items-center flex-col text-center px-4"
@@ -38,16 +46,18 @@ import ContactForm from "../components/ContactForm.astro";
       <div
         class="flex flex-col sm:flex-row justify-center items-center h-full w-full max-w-[800px]"
       >
-        <button
-          class="border-2 bg-sky-500 text-base py-2 px-6 text-slate-50 transition-colors hover:bg-blue-500 rounded-3xl p-13 w-1/2 max-w-44 sm:mr-2"
+        <a
+          href="/contact#careers"
+          class="border-2 border-blue-300 bg-blue-600 text-base py-2 px-6 text-slate-50 transition-colors hover:bg-blue-500 rounded-3xl p-13 w-1/2 max-w-44 sm:mr-2"
         >
-          <a href="/contact#careers">Work with us</a></button
-        >
-        <button
+          <button> Work with us </button>
+        </a>
+        <a
+          href="/contact#contact-form"
           class="border-2 border-slate-200 text-base py-2 px-6 text-slate-50 transition-colors hover:bg-frosted-glass rounded-3xl p-13 mt-6 sm:mt-0 w-1/2 max-w-44 sm:ml-2"
         >
-          <a href="/contact#contact-form">Request a quote</a></button
-        >
+          <button> Request a quote </button>
+        </a>
       </div>
     </div>
   </div>
@@ -189,11 +199,13 @@ import ContactForm from "../components/ContactForm.astro";
           customers and business partners.
         </p>
         <div class="w-full flex justify-center mt-4">
-          <button
-            class="bg-blue-600 text-base py-2 px-6 rounded text-slate-50 transition-colors hover:bg-blue-500"
-          >
-            <a href="/contact#contact-form"> Request a Quote </a>
-          </button>
+          <a href="/contact#contact-form">
+            <button
+              class="bg-blue-200 border border-blue-800 text-base py-2 px-6 rounded text-slate-700 transition-colors hover:bg-blue-400"
+            >
+              Request a Quote
+            </button>
+          </a>
         </div>
       </div>
     </div>
@@ -268,46 +280,30 @@ import ContactForm from "../components/ContactForm.astro";
           </div>
         </div>
         <div>
-          <button
-            class="bg-amber-600 text-base py-2 px-6 rounded text-white transition-colors hover:bg-orange-500"
-          >
-            <a href="/about#environment">Read More</a>
-          </button>
+          <a href="/about#environment">
+            <button
+              class="bg-amber-700 border border-amber-500 text-base py-2 px-6 rounded text-white transition-colors hover:bg-orange-500"
+            >
+              More on the Environement
+            </button>
+          </a>
         </div>
       </div>
     </div>
-    <div class="h-[80vh] relative">
+    <div class="h-[85vh] relative">
       <div
         class="m-auto p-4 h-full max-w-[800px] flex justify-center items-center"
       >
         <ContactForm />
 
         <Image
-          class="object-cover max-h-full h-full w-full fixed -z-10 bottom-0"
+          class="object-cover max-h-full h-full w-full sm:fixed absolute -z-10 bottom-0"
           src={coolTruckPic}
           alt="truck"
         />
       </div>
     </div>
-    <div class="w-full bg-sky-600 py-6 text-slate-50">
-      <div class="m-auto p-4 max-w-[calc(100% - 2rem)]">
-        <h3 class="text-3xl text-center mb-4">Are you looking for work?</h3>
-        <h4 class="text-2xl text-center mb-4">We are hiring drivers!</h4>
-        <p class="text-base">
-          Are you a Long Haul Truck Driver?
-          <br />
-          Do you have a Class 1 License with Air brake certificate?
-          <br />
-          Do you have relevant driving experience in US and Canada?
-        </p>
-        <div class="w-full flex justify-center mt-4">
-          <button
-            class="bg-amber-600 text-base py-2 px-6 rounded text-white transition-colors hover:bg-orange-500"
-            ><a href="/contact#careers">Apply Today</a></button
-          >
-        </div>
-      </div>
-    </div>
+    <Hiring anchorId="index" />
   </main>
 </Layout>
 

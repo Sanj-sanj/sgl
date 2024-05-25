@@ -1,37 +1,45 @@
 <div
-  class="m-auto relative bg-frosted-glass-light rounded flex flex-col items-center"
+  class="w-full relative bg-frosted-glass-light rounded flex flex-col items-center"
 >
   <div class="h-4 absolute -top-28" id="contact-form"></div>
-  <h2 class="text-3xl bg-slate-300 w-full py-2 rounded-t">Questions?</h2>
-  <div class="p-8">
-    <p class="">Send us an email for general inquiries.</p>
-    <form action="" method="post" class="flex flex-col items-center">
-      <div class="flex w-full py-2">
+  <h2 class="text-3xl bg-amber-800 text-stone-100 w-full py-2 rounded-t">
+    Questions?
+  </h2>
+  <div class="px-8 py-4 sm:p-8">
+    <form
+      action=""
+      method="post"
+      class="flex flex-col items-center max-w-[80vw]"
+    >
+      <div class="flex w-full sm:py-2 flex-col sm:flex-row">
         <label class="flex flex-col text-left mr-1">
           First Name:
           <input
+            aria-label="First Name"
             type="text"
             name="firstName"
-            class="w-full rounded border border-slate-400"
+            class="w-full rounded border border-slate-400 px-2 focus:outline-yellow-600"
             required
           />
         </label>
-        <label class="flex flex-col text-left ml-2">
+        <label class="flex flex-col text-left sm:ml-2">
           Last Name:
           <input
+            aria-label="Last Name"
             type="text"
             name="lastName"
-            class="w-full rounded border border-slate-400"
+            class="w-full rounded border border-slate-400 px-2 focus:outline-yellow-600"
             required
           />
         </label>
       </div>
-      <div class="flex w-full py-2">
-        <div class="flex flex-col w-1/2">
+      <div class="flex w-full py-2 flex-col sm:flex-row">
+        <div class="flex flex-col sm:w-1/2">
           <label class="flex flex-col text-left mr-1">
             Email:
             <input
-              class="rounded border border-slate-400"
+              aria-label="Email"
+              class="rounded border border-slate-400 px-2 focus:outline-yellow-600"
               type="email"
               name="email"
               required
@@ -40,18 +48,20 @@
           <label class="flex flex-col text-left mr-1">
             Subject:
             <input
-              class="rounded border border-slate-400"
+              class="rounded border border-slate-400 px-2 focus:outline-yellow-600"
+              aria-label="Subject"
               type="text"
               name="subject"
               required
             />
           </label>
         </div>
-        <div class="flex flex-col w-1/2 justify-end">
+        <div class="flex flex-col sm:w-1/2 justify-end">
           <label class="flex flex-col text-left ml-1">
             Message:
             <textarea
-              class="h-full rounded border border-slate-400"
+              aria-label="Message"
+              class="h-full rounded border border-slate-400 px-2 focus:outline-yellow-600"
               rows={3}
               name="message"
               required></textarea>
@@ -59,7 +69,7 @@
         </div>
       </div>
       <button
-        class="bg-amber-600 text-base py-2 px-6 rounded text-white transition-colors hover:bg-orange-500 mt-8"
+        class="bg-amber-700 text-base py-2 px-6 mt-2 sm:mt-8 rounded text-white transition-colors hover:bg-orange-500"
       >
         SUBMIT
       </button>

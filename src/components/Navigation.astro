@@ -21,25 +21,32 @@ const { orientation } = Astro.props;
       <a href="/">Home</a>
     </li>
 
-    <PopupNavigation
-      client:load
-      text={"About"}
-      subTexts={[
-        { text: "About Us", path: "/about" },
-        { text: "Our Services", path: "/about#services" },
-        { text: "Environmental Policy", path: "/about#environment" },
-      ]}
-      orientation={orientation}
-    />
-
-    <PopupNavigation
-      client:load
-      text={"Contact"}
-      subTexts={[
-        { text: "Contact Us", path: "/contact" },
-        { text: "Careers", path: "/contact#careers" },
-      ]}
-      orientation={orientation}
-    />
+    <li
+      class:list={`sm:ml-2.5 text-center px-2 relative md:flex${orientation === "vertical" && " w-full py-4"}`}
+    >
+      <PopupNavigation
+        client:load
+        text={"About"}
+        subTexts={[
+          { text: "About Us", path: "/about" },
+          { text: "Our Services", path: "/about#services" },
+          { text: "Environmental Policy", path: "/about#environment" },
+        ]}
+        orientation={orientation}
+      />
+    </li>
+    <li
+      class:list={`sm:ml-2.5 text-center px-2 relative md:flex${orientation === "vertical" && " w-full py-4"}`}
+    >
+      <PopupNavigation
+        client:load
+        text={"Contact"}
+        subTexts={[
+          { text: "Contact Us", path: "/contact" },
+          { text: "Careers", path: "/contact#careers" },
+        ]}
+        orientation={orientation}
+      />
+    </li>
   </ul>
 </nav>

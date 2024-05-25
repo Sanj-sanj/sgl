@@ -1,0 +1,39 @@
+---
+interface Props {
+  anchorId: "contact" | "careers" | "index";
+}
+const { anchorId } = Astro.props;
+---
+
+<div class="w-full bg-sky-600 py-6 text-slate-50 relative">
+  <div class="h-4 absolute -top-14" id={anchorId}></div>
+  <div class="m-auto p-4">
+    <h3 class="text-3xl text-center mb-4 flex justify-center w-full">
+      <div class="bg-sky-700 py-2 px-4 sm:px-6 rounded">Looking for work?</div>
+    </h3>
+    <h4 class="text-2xl text-center mb-4 flex justify-center w-full">
+      <!-- <div class="bg-sky-700 py-1 min-w-[600px] rounded"> -->
+      We are hiring drivers!
+    </h4>
+    <div class="flex items-center flex-col w-full">
+      <div class="max-w-[600px] bg-sky-700 rounded text-left p-10">
+        <div class="text-xl text-white border-l-2 pl-6">
+          <p class="mb-3">Are you a Long Haul Truck Driver?</p>
+          <p class="mb-3">
+            Do you have a Class 1 License with Air brake certificate?
+          </p>
+          <p class="">
+            Do you have relevant driving experience in US and Canada?
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-full flex justify-center mt-4">
+    <a
+      href="/contact#careers"
+      class="bg-amber-700 border border-amber-500 text-base py-2 px-6 rounded text-white transition-colors hover:bg-orange-500"
+      ><button>Apply Today</button></a
+    >
+  </div>
+</div>

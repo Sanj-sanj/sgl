@@ -24,18 +24,18 @@ export default function PopupNavigation({
           }, 50)
         }
       >
-        <ul className="top-1/2 left-1/2 bg-stone-100 z-50 border-t border-stone-300 text-stone-800">
+        <div className="top-1/2 left-1/2 bg-stone-100 z-50 border-t border-stone-300 text-stone-800">
           {links.map((link) => (
-            <li key={link.text} className="min-w-44 w-full">
+            <div key={link.text} className="min-w-44 w-full">
               <a
                 className="w-full flex justify-center p-1 hover:bg-stone-200 border-stone-300 [&:nth-child(n+1):nth-last-child(n+1)]:border-b border-x "
                 href={link.path}
               >
                 {link.text}
               </a>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     ) : (
       //  MOBILE MENU'S DROP DOWN BOX
@@ -49,24 +49,24 @@ export default function PopupNavigation({
           }, 50)
         }
       >
-        <ul className="bg-stone-100 z-50 border-t border-stone-300 text-stone-800">
+        <div className="bg-stone-100 z-50 border-t border-stone-300 text-stone-800">
           {links.map((link) => (
-            <li key={link.text} className="w-full">
+            <div key={link.text} className="w-full">
               <a
                 className="w-full flex justify-center p-1 hover:bg-stone-200 border-stone-300 [&:nth-child(n+1):nth-last-child(n+1)]:border-b border-x "
                 href={link.path}
               >
                 {link.text}
               </a>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     );
 
   return (
     <div className="relative h-auto md:w-auto w-full ">
-      <li
+      <button
         className={`md:ml-2.5 text-center px-2 relative md:flex${(orientation === "vertical" && " w-full py-4") || ""}`}
         onMouseMove={() => {
           orientation === "horizontal" && setVisible(popUpMenu(subTexts));
@@ -81,11 +81,11 @@ export default function PopupNavigation({
         onClick={() =>
           orientation === "vertical" && setVisible(popUpMenu(subTexts))
         }
+        id={text}
+        data-dropdown="true"
       >
-        <button data-dropdown="true" id={text}>
-          {text} <span className="font-bold">▼</span>
-        </button>
-      </li>
+        {text} <span className="font-bold">▼</span>
+      </button>
       {visible}
     </div>
   );
