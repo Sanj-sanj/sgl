@@ -1,15 +1,16 @@
 ---
-import Layout from "../layouts/Layout.astro";
 import sglTruckingVideo from "../assets/sgl-trucking-ltd.webm";
 import sglTruckingVideoWebp from "../assets/sgl-Trucking-vid.webp";
 import truckIcon from "../assets/truck.svg";
 import hexagon from "../assets/hexagon.svg";
 import canUsImage from "../assets/us-canada.png";
-import trailersPic from "../assets/cropped-sgl-trailer.webp";
-import blueTruckPic from "../assets/cropped-sgl-truck-3.webp";
-import truckFleetPic from "../assets/cropped-sgl-TRUCK-6.webp";
 import coolTruckPic from "../assets/cool-truck.avif";
 
+const galleryPics = await Astro.glob("../assets/gallery/*.webp").then((pics) =>
+  pics.map((pic) => pic.default),
+);
+
+import Layout from "../layouts/Layout.astro";
 import { Image } from "astro:assets";
 import ContactForm from "../components/ContactForm.astro";
 import Hiring from "../components/Hiring.astro";
@@ -18,20 +19,27 @@ import Hiring from "../components/Hiring.astro";
 <Layout title="SGL Trucking LTD. - Home">
   <!-- HERO -->
   <div class="text-white relative h-[100vh] w-full" id="hero">
-    <!-- <img
-      class="absolute top-0 object-fill h-[100vh] w-full"
+    <img
+      class="absolute sm:hidden top-0 object-fill h-[100vh] w-full"
       src={sglTruckingVideoWebp.src}
-      alt="l"
-    /> -->
+      alt="DashCam footage of a truckers journey."
+    />
     <video
       autoplay
       muted
       loop
       playsinline
+      preload="none"
       aria-label="DashCam footage of a truckers journey."
-      class="absolute top-0 object-fill h-[100vh] w-full"
+      class="absolute top-0 object-fill h-[100vh] w-full hidden sm:block"
     >
       <source src={sglTruckingVideo} type="video/webm" />
+      <track
+        default
+        kind="captions"
+        srclang="eng"
+        src="../assets/sgl-trucking-ltd.vtt"
+      />
     </video>
     <div
       class="absolute bottom-0 h-[37vh] mb-1 w-full flex justify-center items-center flex-col text-center px-4"
@@ -89,70 +97,27 @@ import Hiring from "../components/Hiring.astro";
         </p>
       </div>
 
+      <!-- GALLERY START -->
       <div
         class="w-full flex justify-center max-h-96 px-8 sm:px-24 lg:px-48 mt-4"
       >
         <div class="swiper" data-swiper-autoplay={true}>
           <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <Image
-                class="w-full object-cover"
-                src={blueTruckPic}
-                alt="Shot of a blue SGL truck in the winter with haul in tow."
-              />
-            </div>
-            <div class="swiper-slide">
-              <Image
-                class="w-full object-cover"
-                src={truckFleetPic}
-                alt="Line up shot of the SGL truck cabs"
-              />
-            </div>
-            <div class="swiper-slide">
-              <Image
-                class="w-full object-cover"
-                src={trailersPic}
-                alt="Line up shot of the SGL dry van trailers plus a cab"
-              />
-            </div>
-            <div class="swiper-slide">
-              <Image
-                class="w-full object-cover"
-                src={trailersPic}
-                alt="Line up shot of the SGL dry van trailers plus a cab"
-              />
-            </div>
-            <div class="swiper-slide">
-              <Image
-                class="w-full object-cover"
-                src={trailersPic}
-                alt="Line up shot of the SGL dry van trailers plus a cab"
-              />
-            </div>
-            <div class="swiper-slide">
-              <Image
-                class="w-full object-cover"
-                src={trailersPic}
-                alt="Line up shot of the SGL dry van trailers plus a cab"
-              />
-            </div>
-            <div class="swiper-slide">
-              <Image
-                class="w-full object-cover"
-                src={trailersPic}
-                alt="Line up shot of the SGL dry van trailers plus a cab"
-              />
-            </div>
-            <div class="swiper-slide">
-              <Image
-                class="w-full object-cover"
-                src={trailersPic}
-                alt="Line up shot of the SGL dry van trailers plus a cab"
-              />
-            </div>
+            {
+              galleryPics.map((pic) => (
+                <div class="swiper-slide">
+                  <Image
+                    class="w-full object-cover"
+                    src={pic}
+                    alt="Shot of a blue SGL truck in the winter with haul in tow."
+                  />
+                </div>
+              ))
+            }
           </div>
         </div>
       </div>
+      <!-- GALLERY END-->
     </div>
 
     <div class="w-full py-12 relative bg-stone-200 z-10">
