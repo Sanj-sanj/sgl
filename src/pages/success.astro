@@ -1,0 +1,28 @@
+---
+import { Image } from "astro:assets";
+import sglLogo from "../assets/sgl-Trucking.webp";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="SGL Trucking - Form submission success page">
+  <div
+    class="h-[100dvh] w-[100vw] bg-stone-300 flex justify-center items-center px-4"
+  >
+    <div class="max-w-[800px] flex flex-col items-center">
+      <Image
+        src={sglLogo}
+        alt="SGL Trucking LTD."
+        class="mb-4 max-w-72 max-h-60"
+      />
+      <h1 class="text-4xl mb-6">Thank you!</h1>
+      <div class="text-xl text-center leading-10">
+        <p>Your message has been sent.</p>
+        <p>Please wait while we get back to you.</p>
+        <p>
+          Return to the <a href="/" class="text-blue-600 underline">homepage?</a
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+</Layout>
