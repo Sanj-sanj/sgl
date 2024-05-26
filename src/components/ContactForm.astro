@@ -3,7 +3,7 @@
 >
   <div class="h-4 absolute -top-28" id="contact-form"></div>
   <h2
-    class="text-3xl bg-amber-800 text-stone-100 w-full py-2 rounded-t outline outline-2 outline-amber-600"
+    class="text-2xl sm:text-3xl bg-amber-800 text-stone-100 w-full py-2 rounded-t outline outline-2 outline-amber-600"
   >
     Questions?
   </h2>
@@ -15,7 +15,7 @@
       name="Inquiries"
       method="post"
       action="/success"
-      class="flex flex-col items-center max-w-[80vw]"
+      class="flex flex-col items-center max-w-[80vw] text-base"
     >
       <div class="flex w-full sm:py-2 flex-col sm:flex-row">
         <label class="flex flex-col text-left sm:mr-1">
@@ -47,7 +47,7 @@
           /></label
         >
       </p>
-      <div class="flex w-full py-2 flex-col sm:flex-row">
+      <div class="flex w-full py-2 mb-4 flex-col sm:flex-row">
         <div class="flex flex-col sm:w-1/2">
           <label class="flex flex-col text-left sm:mr-1">
             Email:
@@ -71,7 +71,7 @@
           </label>
         </div>
         <div class="flex flex-col sm:w-1/2 justify-end">
-          <label class="flex flex-col text-left ml-1">
+          <label class="flex flex-col text-left sm:ml-1">
             Message:
             <textarea
               aria-label="Message"
@@ -82,7 +82,7 @@
           </label>
         </div>
       </div>
-      <div class="mt-6" data-netlify-recaptcha="true"></div>
+      <div data-netlify-recaptcha="true"></div>
       <button
         class="bg-amber-700 text-base py-2 px-6 mt-2 sm:mt-8 rounded text-white transition-colors hover:bg-orange-500"
       >
