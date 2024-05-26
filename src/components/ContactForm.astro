@@ -8,6 +8,8 @@
   <div class="px-8 py-4 sm:p-8">
     <form
       data-netlify="true"
+      data-netlify-recaptcha="true"
+      netlify-honeypot="true"
       name="Inquiries"
       method="post"
       class="flex flex-col items-center max-w-[80vw]"
@@ -34,6 +36,14 @@
           />
         </label>
       </div>
+      <p class="hidden">
+        <label>
+          Dont fill this out, human: <input
+            name="trap"
+            aria-label="User ignore this field"
+          /></label
+        >
+      </p>
       <div class="flex w-full py-2 flex-col sm:flex-row">
         <div class="flex flex-col sm:w-1/2">
           <label class="flex flex-col text-left mr-1">
@@ -69,6 +79,7 @@
           </label>
         </div>
       </div>
+      <div data-netlify-recaptcha="true"></div>
       <button
         class="bg-amber-700 text-base py-2 px-6 mt-2 sm:mt-8 rounded text-white transition-colors hover:bg-orange-500"
       >
