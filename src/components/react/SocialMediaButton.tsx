@@ -28,8 +28,8 @@ export default function SocialMediaButton() {
         className="h-full w-full absolute top-0 z-30 hidden"
         onClick={() => toggleMenu()}
       ></div>
-      <div className="fixed bottom-16 right-6 flex flex-col items-center z-40">
-        <div className=" mb-2 flex flex-col [&_button]:my-2 [&_button]:rounded-full [&_button]:p-2">
+      <div className="fixed bottom-8 sm:bottom-10 right-6 flex flex-col sm:flex-row items-center z-40">
+        <div className=" mb-2 flex flex-col sm:flex-row [&_button]:my-2 sm:[&_button]:mr-2 [&_button]:rounded-full [&_button]:p-2">
           <button
             className="bg-green-700 translate-x-96"
             ref={mailButton}
@@ -77,14 +77,14 @@ export default function SocialMediaButton() {
           </button>
         </div>
         <button
-          className="bg-orange-500 w-20 h-20 sm:p-2 flex justify-center items-center rounded-full"
+          className="bg-orange-500 w-16 h-16 sm:w-20 sm:h-20 sm:p-2 flex justify-center items-center rounded-full"
           onClick={() => toggleMenu()}
           title="Looking for another way to reach us?"
         >
           <img
             src={socialIcon.src}
             alt="Social media menu button."
-            className="animate-pulse p-2 hover:animate-none w-16 h-16 sm:w-20 sm:h-20"
+            className="animate-pulse p-2 hover:animate-none w-14 h-14 sm:w-20 sm:h-20"
           />
         </button>
       </div>

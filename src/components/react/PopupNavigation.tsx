@@ -14,7 +14,7 @@ export default function PopupNavigation({
   const popUpMenu = (links: { text: string; path: string }[]) =>
     orientation === "horizontal" ? (
       <div
-        className="h-[100vh] absolute top-1/2 left-1/2"
+        className="h-[100vh] absolute top-1/2 left-1/2 animate-fade-in"
         style={{ transform: "translate(-50%, 2%)" }}
         onMouseMove={() => (isHoveringPopup.current = true)}
         onMouseLeave={() =>
@@ -28,7 +28,7 @@ export default function PopupNavigation({
           {links.map((link) => (
             <div key={link.text} className="min-w-44 w-full">
               <a
-                className="w-full flex justify-center p-1 hover:bg-stone-200 border-stone-300 [&:nth-child(n+1):nth-last-child(n+1)]:border-b border-x "
+                className="w-full flex justify-center px-1 py-2 hover:bg-stone-200 border-stone-300 [&:nth-child(n+1):nth-last-child(n+1)]:border-b border-x "
                 href={link.path}
               >
                 {link.text}
@@ -40,7 +40,7 @@ export default function PopupNavigation({
     ) : (
       //  MOBILE MENU'S DROP DOWN BOX
       <div
-        className="w-full"
+        className="w-full animate-fade-in"
         onMouseMove={() => (isHoveringPopup.current = true)}
         onMouseLeave={() =>
           setTimeout(() => {
@@ -53,7 +53,7 @@ export default function PopupNavigation({
           {links.map((link) => (
             <div key={link.text} className="w-full">
               <a
-                className="w-full flex justify-center p-1 hover:bg-stone-200 border-stone-300 [&:nth-child(n+1):nth-last-child(n+1)]:border-b border-x "
+                className="w-full flex justify-center px-1 py-2 hover:bg-stone-200 border-stone-300 [&:nth-child(n+1):nth-last-child(n+1)]:border-b border-x "
                 href={link.path}
               >
                 {link.text}
@@ -67,7 +67,7 @@ export default function PopupNavigation({
   return (
     <div className="relative h-auto md:w-auto w-full ">
       <button
-        className={`md:ml-2.5 text-center px-2 relative md:flex${(orientation === "vertical" && " w-full py-4") || ""}`}
+        className="w-full"
         onMouseMove={() => {
           orientation === "horizontal" && setVisible(popUpMenu(subTexts));
         }}
@@ -84,7 +84,7 @@ export default function PopupNavigation({
         id={text}
         data-dropdown="true"
       >
-        {text} <span className="font-bold">▼</span>
+        {text} <span className="font-bold text-xs">▼</span>
       </button>
       {visible}
     </div>
