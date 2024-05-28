@@ -26,6 +26,7 @@
             name="firstName"
             class="w-full rounded border border-slate-400 px-2 focus:outline-yellow-600"
             required
+            autocomplete="given-name"
           />
         </label>
         <label class="flex flex-col text-left sm:ml-2">
@@ -36,6 +37,7 @@
             name="lastName"
             class="w-full rounded border border-slate-400 px-2 focus:outline-yellow-600"
             required
+            autocomplete="family-name"
           />
         </label>
       </div>
@@ -57,6 +59,7 @@
               type="email"
               name="email"
               required
+              autocomplete="email"
             />
           </label>
           <label class="flex flex-col text-left sm:mr-1">
@@ -67,6 +70,7 @@
               type="text"
               name="subject"
               required
+              autocomplete="off"
             />
           </label>
         </div>
@@ -78,6 +82,7 @@
               class="h-full rounded border border-slate-400 px-2 focus:outline-yellow-600"
               rows={3}
               name="message"
+              autocomplete="off"
               required></textarea>
           </label>
         </div>
