@@ -29,7 +29,7 @@ export default function SocialMediaButton() {
         onClick={() => toggleMenu()}
       ></div>
       <div className="fixed bottom-8 sm:bottom-10 right-6 flex flex-col sm:flex-row items-center z-40">
-        <div className=" sm:mb-2 flex flex-col sm:flex-row [&_button]:my-2 sm:[&_button]:mr-2 [&_button]:rounded-full [&_button]:p-2">
+        <div className="mb-2 sm:mb-0 flex flex-col sm:flex-row [&_button]:my-2 sm:[&_button]:mr-2 [&_button]:rounded-full [&_button]:p-2">
           <button
             className="bg-green-700 translate-x-96"
             ref={mailButton}
